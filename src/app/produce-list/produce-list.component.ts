@@ -11,7 +11,7 @@ export class ProduceListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-   console.log(this.selected);
+  //  console.log(this.id);
   }
   products=data;
   changeStatus(){
