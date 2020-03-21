@@ -14,7 +14,6 @@ export class ProduceListComponent implements OnInit {
   ngOnInit() {
     //  console.log(this.id);
     this.getProducts();
-    console.log(this.productService.getProducts());
   }
 
   changeStatus() {
