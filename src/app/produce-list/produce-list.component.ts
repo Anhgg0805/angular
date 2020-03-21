@@ -13,6 +13,7 @@ export class ProduceListComponent implements OnInit {
   ngOnInit() {
   //  console.log(this.id);
   }
+  selected:Product;
   products=data;
   changeStatus(){
     console.log('click')

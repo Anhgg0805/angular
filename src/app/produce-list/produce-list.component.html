@@ -1,7 +1,7 @@
 <div *ngIf="selected">
- <p class="card-text"> {{selected.name}}</p>
- <p class="card-text">{{selected.desc}}</p>
+  <app-product-detail [data]="selected"></app-product-detail>
 </div>
+
 <div class="row">
 	<div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of products">
 		<div class="card h-100">
