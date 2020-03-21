@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { data } from '../MockData';
+import {ProductService} from '../product.service';
 import {Product} from '../product';
 @Component({
   selector: 'app-produce-list',
@@ -7,14 +7,18 @@ import {Product} from '../product';
   styleUrls: ['./produce-list.component.css']
 })
 export class ProduceListComponent implements OnInit {
-
-  constructor() { }
+  selected:Product;
+  products:Product [];
+  constructor(
+    private productService: ProductService
+  ) { }
 
   ngOnInit() {
   //  console.log(this.id);
+  this.getProducts();
+  console.log(this.productService.getProducts());
   }
-  selected:Product;
-  products=data;
+  
   changeStatus(){
     console.log('click')
   }
@@ -24,5 +28,8 @@ export class ProduceListComponent implements OnInit {
   }
   removeItem(id){
     this.products = this.products.filter(x => x.id !== id);
+  }
+  getProducts(){
+    this.products=this.productService.getProducts();
   }
 }
