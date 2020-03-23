@@ -20,4 +20,7 @@ export class ProductService {
     let newObj = { id: 11, ...product };
     this.products.push(newObj);
   }
+  editProduct(product){
+    return this.products.map( item => item.id === product.id ? product : item);
+  }
 }

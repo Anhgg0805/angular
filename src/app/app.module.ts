@@ -16,10 +16,11 @@ import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductManagerComponent } from './product-manager/product-manager.component';
 import { ProductAddComponent } from './product-add/product-add.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ,AppRoutingModule],
-  declarations: [ AppComponent, HelloComponent, SlideComponent, ProduceListComponent, ProductComponent, ProductDetailComponent, ContactComponent, ServiceComponent, AboutComponent, NotFoundComponent, ProductManagerComponent, ProductAddComponent ],
+  declarations: [ AppComponent, HelloComponent, SlideComponent, ProduceListComponent, ProductComponent, ProductDetailComponent, ContactComponent, ServiceComponent, AboutComponent, NotFoundComponent, ProductManagerComponent, ProductAddComponent, ProductEditComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })

@@ -1,5 +1,9 @@
 <div *ngIf="selected">
-  <app-product-detail [data]="selected"></app-product-detail>
+  <p class="card-text">{{selected.id}}</p>
+<p class="card-text"> {{selected.name}}</p>
+<p class="card-text">{{selected.price}}</p>
+ <p class="card-text">{{selected.desc}}</p>
+ <p class="card-text">{{selected.status ? 'In stock':'Out stock'}}</p>
 </div>
 
 <div class="row">
