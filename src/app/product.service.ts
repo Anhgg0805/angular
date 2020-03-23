@@ -10,4 +10,8 @@ export class ProductService {
   getProducts() {
     return this.products;
   }
+  addProduct(product){
+    let newObj = { id: 11, ...product };
+    this.products.push(newObj);
+  }
 }
