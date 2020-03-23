@@ -7,7 +7,7 @@ import {ProductService} from '../product.service';
   styleUrls: ['./product-add.component.css']
 })
 export class ProductAddComponent implements OnInit {
-  product:Product;
+  product:Product=new Product();
   constructor(
     private productService :ProductService
   ) { }

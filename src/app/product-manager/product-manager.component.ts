@@ -8,7 +8,7 @@ import {ProductService} from '../product.service';
 })
 export class ProductManagerComponent implements OnInit {
   products:Product[];
-  productNew:Product;
+  productNew:Product= new Product();
   product:Product;
   constructor(
     private productService:ProductService
