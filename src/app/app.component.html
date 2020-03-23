@@ -7,19 +7,19 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" routerLink="/service" routerLinkActive="active">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" routerLink="/manager" routerLinkActive="active">Product Manager</a>
           </li>
         </ul>
       </div>
@@ -45,8 +45,8 @@
 
       <div class="col-lg-9">
 <app-slide></app-slide>
-        
-<app-produce-list></app-produce-list>
+      <router-outlet></router-outlet>
+<!-- <app-produce-list></app-produce-list> -->
 
       </div>
       <!-- /.col-lg-9 -->
@@ -56,3 +56,10 @@
 
   </div>
   <!-- /.container -->
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
