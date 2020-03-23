@@ -8,18 +8,22 @@ import {ProductService} from '../product.service';
 })
 export class ProductManagerComponent implements OnInit {
   products:Product[];
+  productNew:Product;
   product:Product;
   constructor(
-    private productServie:ProductService
+    private productService:ProductService
   ) { }
 
   ngOnInit() {
     this.getProducts();
   }
   getProducts(){
-    this.products=this.productServie.getProducts();
+    this.products=this.productService.getProducts();
   }
   removeItem(id) {
     this.products = this.products.filter(x => x.id !== id);
+  }
+  addProduct(){
+    this.productService.
   }
 }
