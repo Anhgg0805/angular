@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: "service", component: ServiceComponent },
   { path: "contact", component: ContactComponent },
   { path: "manager", component: ProductManagerComponent },
+  {path:'addProduct',component:ProductAddComponent},
   { path: "404", component: NotFoundComponent },
   { path: "**", redirectTo: "/404" },
   

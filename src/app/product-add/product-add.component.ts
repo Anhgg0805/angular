@@ -16,5 +16,6 @@ export class ProductAddComponent implements OnInit {
   }
   addProduct(){
     this.productService.addProduct(this.product);
+    console.log(this.product);
   }
 }
