@@ -4,7 +4,6 @@ import {AboutComponent} from './about/about.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ServiceComponent } from './service/service.component';
 import { ContactComponent } from './contact/contact.component';
-// import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {ProduceListComponent} from './produce-list/produce-list.component';
 import {ProductManagerComponent} from './product-manager/product-manager.component';
