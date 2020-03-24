@@ -20,13 +20,17 @@ export class ProductManagerComponent implements OnInit {
     this.getProducts();
   }
   getProducts(){
-    this.products=this.productService.getProducts();
+    // this.products=this.productService.getProducts();
+    this.productService.getProducts().subscribe(data => {
+      // console.log(data);
+      this.products=data;
+    })
   }
   removeItem(id) {
-    this.products=this.productService.removeProduct(id);
+    // this.products=this.productService.removeProduct(id);
   }
   addProduct(){
-    this.productService.addProduct(this.productNew);
+    // this.productService.addProduct(this.productNew);
     // this.router.navigate(['/manager']);
   }
 }

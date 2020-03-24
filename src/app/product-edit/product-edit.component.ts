@@ -20,12 +20,20 @@ export class ProductEditComponent implements OnInit {
     this.getProduct();
   }
   getProduct(){
-    this.route.params.subscribe(param => {
-      this.product = this.productService.getProduct(param.id);
+     this.route.params.subscribe(param => {
+      this.productService.getProduct(param.id).subscribe(data =>{
+        // console.log(data);
+        this.product=data;
+      })
+      console.log(param);
     })
   }
-  submitForm(){
-    this.productService.editProduct(this.product);
-    this.router.navigate(['/manager']);
+  edit(){
+    this.productService.editProduct(this.product).subscribe(data =>{
+      console.log(data);
+      this.router.navigate(['/product-manager']);
+    }
+    );
+    
   }
 }
