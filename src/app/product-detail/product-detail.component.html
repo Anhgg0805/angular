@@ -1,7 +1,7 @@
 <div *ngIf="product">
-  <p class="card-text">{{product.id}}</p>
-<p class="card-text"> {{product.name}}</p>
-<p class="card-text">{{product.price}}</p>
- <p class="card-text">{{product.desc}}</p>
- <p class="card-text">{{product.status ? 'In stock':'Out stock'}}</p>
+  <p class="card-text">ID: {{product.id}}</p>
+<p class="card-text">Name: {{product.name}}</p>
+<p class="card-text">Price: ${{product.price}}</p>
+ <p class="card-text">Desc: {{product.desc}}</p>
+ <p class="card-text">Staus: {{product.status ? 'In stock':'Out stock'}}</p>
  </div>

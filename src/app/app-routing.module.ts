@@ -9,14 +9,16 @@ import { ProduceListComponent } from "./produce-list/produce-list.component";
 import { ProductManagerComponent } from "./product-manager/product-manager.component";
 import {ProductDetailComponent} from './product-detail/product-detail.component';
 import {ProductEditComponent} from './product-edit/product-edit.component'
+import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
-  { path: "home", component: ProduceListComponent },
+  { path: "home", component: HomeComponent },
   { path: "about", component: AboutComponent },
   { path: "service", component: ServiceComponent },
   { path: "contact", component: ContactComponent },
-  { path: "manager", component: ProductManagerComponent },
+  { path: "product-list", component: ProductManagerComponent },
+  {path : 'products',component:ProduceListComponent},
   {path:'addProduct',component:ProductAddComponent},
   { path: 'product/:id', component: ProductDetailComponent},
   { path: 'product/edit/:id', component: ProductEditComponent},

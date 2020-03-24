@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
+import {HttpClientModule} from '@angular/common/http'
 import { ProductService } from './product.service';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -17,10 +18,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductManagerComponent } from './product-manager/product-manager.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ,AppRoutingModule],
-  declarations: [ AppComponent, HelloComponent, SlideComponent, ProduceListComponent, ProductComponent, ProductDetailComponent, ContactComponent, ServiceComponent, AboutComponent, NotFoundComponent, ProductManagerComponent, ProductAddComponent, ProductEditComponent ],
+  imports:      [ BrowserModule, FormsModule ,AppRoutingModule,HttpClientModule],
+  declarations: [ AppComponent, HelloComponent, SlideComponent, ProduceListComponent, ProductComponent, ProductDetailComponent, ContactComponent, ServiceComponent, AboutComponent, NotFoundComponent, ProductManagerComponent, ProductAddComponent, ProductEditComponent, HomeComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })

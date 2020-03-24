@@ -25,6 +25,10 @@ export class ProduceListComponent implements OnInit {
   }
   
   getProducts() {
-    this.products = this.productService.getProducts();
+    // this.products = this.productService.getProducts();
+    this.productService.getProducts().subscribe(data => {
+      // console.log(data);
+      this.products=data;
+    })
   }
 }
