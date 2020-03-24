@@ -23,9 +23,7 @@ export class ProduceListComponent implements OnInit {
     this.selected = product;
     console.log(this.selected);
   }
-  removeItem(id) {
-    this.products = this.products.filter(x => x.id !== id);
-  }
+  
   getProducts() {
     this.products = this.productService.getProducts();
   }
