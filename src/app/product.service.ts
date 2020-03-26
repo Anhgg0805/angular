@@ -20,12 +20,14 @@ export class ProductService {
     // return this.products.find(product => product.id == id);
     return this.http.get<Product>(`${this.api}/${id}`);
   }
-  removeProduct(id){
-    return this.products.filter(product => product.id !== id);
+  removeProduct(id):Observable <Product>{
+    // return this.products.filter(product => product.id !== id);
+    return this.http.delete<Product>(`${this.api}/${id}`);
   }
-  addProduct(product){
-    let newObj = { id: 11, ...product };
-    this.products.push(newObj);
+  addProduct(product):Observable <Product>{
+    // let newObj = { id: 11, ...product };
+    // this.products.push(newObj);
+    return this.http.post<Product>(`${this.api}`,product);
   }
   editProduct(product):Observable<Product>{
     return this.http.put<Product>(`${this.api}/${product.id}`,product); 

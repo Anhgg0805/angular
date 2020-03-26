@@ -13,7 +13,7 @@ import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
-  { path: "home", component: HomeComponent },
+  { path: "home", component: ProduceListComponent },
   { path: "about", component: AboutComponent },
   { path: "service", component: ServiceComponent },
   { path: "contact", component: ContactComponent },
